@@ -31,7 +31,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html, body { height: 100%; background: var(--bg); font-family: 'DM Sans', sans-serif; color: var(--text); overscroll-behavior: none; }
- 
+
   /* LAYOUT */
   .app { display: flex; flex-direction: column; height: 100dvh; max-width: 430px; margin: 0 auto; background: var(--bg); position: relative; }
   .header { padding: 52px 20px 16px; background: var(--green); color: white; flex-shrink: 0; }
@@ -39,24 +39,24 @@
   .app-title { font-family: 'Bebas Neue', sans-serif; font-size: 32px; letter-spacing: 1px; line-height: 1; }
   .app-sub { font-size: 13px; opacity: 0.75; margin-top: 2px; font-weight: 300; }
   .streak-pill { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 5px; }
- 
+
   /* TABS */
   .tabs { display: flex; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; }
   .tab { flex: 1; padding: 13px 4px; text-align: center; font-size: 11px; font-weight: 500; color: var(--hint); border: none; background: none; cursor: pointer; position: relative; transition: color 0.2s; letter-spacing: 0.3px; }
   .tab.active { color: var(--green); }
   .tab.active::after { content: ''; position: absolute; bottom: 0; left: 20%; right: 20%; height: 2px; background: var(--green); border-radius: 2px 2px 0 0; }
   .tab-icon { font-size: 18px; display: block; margin-bottom: 2px; }
- 
+
   /* SCROLL CONTENT */
   .content { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; }
   .section { display: none; padding: 16px; }
   .section.active { display: block; }
- 
+
   /* CARDS */
   .card { background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); margin-bottom: 12px; overflow: hidden; }
   .card-body { padding: 16px; }
   .card-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--hint); margin-bottom: 12px; }
- 
+
   /* METRIC GRID */
   .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
   .metric-tile { background: var(--surface); border-radius: var(--radius-sm); border: 1px solid var(--border); padding: 14px; }
@@ -66,30 +66,30 @@
   .metric-tile-delta { font-size: 11px; margin-top: 4px; font-weight: 500; }
   .up { color: var(--green); }
   .down { color: var(--red); }
- 
+
   /* ENERGY BAR */
   .energy-row { display: flex; align-items: flex-end; gap: 6px; height: 70px; }
   .energy-col { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
   .energy-bar { width: 100%; border-radius: 5px 5px 0 0; background: var(--green); transition: height 0.4s; }
   .energy-col-label { font-size: 10px; color: var(--hint); margin-top: 4px; }
- 
+
   /* FORM */
   .form-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 6px; display: block; }
   .form-input { width: 100%; padding: 13px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-size: 16px; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); margin-bottom: 14px; transition: border-color 0.2s; }
   .form-input:focus { outline: none; border-color: var(--green); background: var(--surface); }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .form-section-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.5px; color: var(--text); margin: 20px 0 10px; }
- 
+
   /* ENERGY SELECT */
   .energy-select { display: flex; gap: 8px; margin-bottom: 14px; }
   .energy-opt { flex: 1; padding: 12px 4px; border: 1.5px solid var(--border); border-radius: var(--radius-sm); text-align: center; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s; background: var(--bg); color: var(--muted); }
   .energy-opt.sel { border-color: var(--green); background: var(--green-dim); color: var(--green); }
- 
+
   /* BUTTONS */
   .btn-primary { width: 100%; padding: 16px; background: var(--green); color: white; border: none; border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; margin-top: 8px; letter-spacing: 0.3px; transition: opacity 0.15s; }
   .btn-primary:active { opacity: 0.85; }
   .btn-sm { padding: 8px 14px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); font-size: 12px; font-weight: 500; cursor: pointer; color: var(--muted); font-family: 'DM Sans', sans-serif; }
- 
+
   /* RECORDS */
   .pr-row { display: flex; justify-content: space-between; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--border); }
   .pr-row:last-child { border-bottom: none; }
@@ -100,30 +100,30 @@
   .conquista-row:last-child { border-bottom: none; }
   .conquista-semana { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 3px; }
   .conquista-text { font-size: 14px; color: var(--text); font-style: italic; }
- 
+
   /* CHARTS */
   .chart-wrap { position: relative; height: 150px; width: 100%; }
- 
+
   /* EMPTY */
   .empty { text-align: center; padding: 40px 20px; }
   .empty-icon { font-size: 48px; margin-bottom: 12px; }
   .empty-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--muted); margin-bottom: 6px; }
   .empty-sub { font-size: 13px; color: var(--hint); line-height: 1.5; }
- 
+
   /* TOAST */
   .toast { position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--text); color: white; padding: 12px 20px; border-radius: 30px; font-size: 14px; font-weight: 500; opacity: 0; transition: all 0.3s; pointer-events: none; white-space: nowrap; z-index: 999; }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
- 
+
   /* INSTALL BANNER */
   .install-banner { background: var(--green-dim); border: 1px solid var(--green-mid); border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 12px; display: flex; gap: 12px; align-items: flex-start; }
   .install-text { font-size: 13px; color: var(--green); line-height: 1.5; }
   .install-text strong { font-weight: 700; display: block; margin-bottom: 2px; }
   .install-close { background: none; border: none; font-size: 18px; color: var(--green); cursor: pointer; padding: 0; line-height: 1; }
- 
+
   /* MINI CHART (inline bars) */
   .mini-chart { display: flex; align-items: flex-end; gap: 4px; height: 50px; margin-top: 8px; }
   .mini-bar { flex: 1; border-radius: 3px 3px 0 0; min-height: 4px; }
- 
+
   @media (prefers-color-scheme: dark) {
     :root {
       --bg: #111410;
@@ -157,16 +157,16 @@
       </div>
     </div>
   </div>
- 
+
   <div class="tabs">
     <button class="tab active" onclick="nav('home',this)"><span class="tab-icon">🏠</span>Início</button>
     <button class="tab" onclick="nav('registrar',this)"><span class="tab-icon">✏️</span>Registrar</button>
     <button class="tab" onclick="nav('graficos',this)"><span class="tab-icon">📈</span>Gráficos</button>
     <button class="tab" onclick="nav('recordes',this)"><span class="tab-icon">🏆</span>Recordes</button>
   </div>
- 
+
   <div class="content">
- 
+
     <!-- HOME -->
     <div id="sec-home" class="section active">
       <div id="install-banner" class="install-banner">
@@ -177,13 +177,13 @@
         </div>
         <button class="install-close" onclick="dismissBanner()">×</button>
       </div>
- 
+
       <div id="home-empty" class="empty">
         <div class="empty-icon">⚽</div>
         <div class="empty-title">Primeiro registro aqui</div>
         <div class="empty-sub">Toque em <strong>Registrar</strong> para adicionar seus primeiros resultados e começar a acompanhar sua evolução.</div>
       </div>
- 
+
       <div id="home-content" style="display:none">
         <div class="card card-body" style="background:var(--green); color:white; border:none;">
           <div style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; opacity:0.75; margin-bottom:4px;">Última avaliação</div>
@@ -192,29 +192,29 @@
             <div id="last-energy-display" style="font-size:13px; opacity:0.85;"></div>
           </div>
         </div>
- 
+
         <div class="metric-grid" id="home-metrics"></div>
- 
+
         <div class="card card-body">
           <div class="card-title">Energia — últimos registros</div>
           <div class="energy-row" id="home-energy-chart"></div>
           <div style="display:flex; gap:6px; margin-top:6px;" id="home-energy-labels"></div>
         </div>
- 
+
         <div class="card card-body" id="home-conquista-card" style="display:none">
           <div class="card-title">Conquista mais recente</div>
           <div id="home-conquista-text" style="font-size:15px; font-style:italic; line-height:1.5; color:var(--text);"></div>
         </div>
       </div>
     </div>
- 
+
     <!-- REGISTRAR -->
     <div id="sec-registrar" class="section">
       <div class="card card-body">
         <div class="form-section-title">Identificação</div>
         <label class="form-label">Data</label>
         <input class="form-input" type="date" id="f-data">
- 
+
         <div class="form-section-title">Energia hoje</div>
         <label class="form-label">Como você está? (1 cansado → 5 ótimo)</label>
         <div class="energy-select" id="energy-select">
@@ -224,7 +224,7 @@
           <div class="energy-opt" onclick="pickEnergy(4)">4</div>
           <div class="energy-opt" onclick="pickEnergy(5)">5</div>
         </div>
- 
+
         <div class="form-section-title">Velocidade & Agilidade</div>
         <div class="form-row">
           <div>
@@ -236,7 +236,7 @@
             <input class="form-input" type="number" id="f-salto" inputmode="numeric" placeholder="30">
           </div>
         </div>
- 
+
         <div class="form-section-title">Força & Core</div>
         <div class="form-row">
           <div>
@@ -248,7 +248,7 @@
             <input class="form-input" type="number" id="f-prancha" inputmode="numeric" placeholder="45">
           </div>
         </div>
- 
+
         <div class="form-section-title">Técnica de Futsal</div>
         <div class="form-row">
           <div>
@@ -256,19 +256,22 @@
             <input class="form-input" type="number" id="f-embaixadinha" inputmode="numeric" placeholder="20">
           </div>
           <div>
-            <label class="form-label">Passes (de 10)</label>
-            <input class="form-input" type="number" id="f-passes" inputmode="numeric" max="10" placeholder="7">
+            <label class="form-label">Passes ângulo direito (de 10)</label>
+            <input class="form-input" type="number" id="f-passes-dir" inputmode="numeric" max="10" placeholder="7">
           </div>
         </div>
- 
-        <div class="form-section-title">Conquista da semana</div>
-        <label class="form-label">O que você fez bem ou superou?</label>
+        <label class="form-label">Passes ângulo esquerdo (de 10)</label>
+        <input class="form-input" type="number" id="f-passes-esq" inputmode="numeric" max="10" placeholder="7">
+        <div style="font-size:12px; color:var(--hint); margin-top:-8px; margin-bottom:14px; line-height:1.5;">10 tentativas de passe para cada ângulo do gol na quadra.</div>
+
+        <div class="form-section-title">Conquista do dia</div>
+        <label class="form-label">O que você fez bem ou superou hoje?</label>
         <textarea class="form-input" id="f-conquista" rows="3" placeholder="Ex: Fiz a prancha por 1 minuto pela primeira vez!" style="resize:none; font-size:14px;"></textarea>
- 
+
         <button class="btn-primary" onclick="salvar()">Salvar registro ✓</button>
       </div>
     </div>
- 
+
     <!-- GRÁFICOS -->
     <div id="sec-graficos" class="section">
       <div id="graf-empty" class="empty">
@@ -298,12 +301,16 @@
           <div class="chart-wrap"><canvas id="c-embaixadinha"></canvas></div>
         </div>
         <div class="card card-body">
-          <div class="card-title">Passes no alvo — de 10 tentativas</div>
-          <div class="chart-wrap"><canvas id="c-passes"></canvas></div>
+          <div class="card-title">Passes ângulo direito — de 10 tentativas</div>
+          <div class="chart-wrap"><canvas id="c-passes-dir"></canvas></div>
+        </div>
+        <div class="card card-body">
+          <div class="card-title">Passes ângulo esquerdo — de 10 tentativas</div>
+          <div class="chart-wrap"><canvas id="c-passes-esq"></canvas></div>
         </div>
       </div>
     </div>
- 
+
     <!-- RECORDES -->
     <div id="sec-recordes" class="section">
       <div id="rec-empty" class="empty">
@@ -325,20 +332,20 @@
         </div>
       </div>
     </div>
- 
+
   </div>
 </div>
- 
+
 <div class="toast" id="toast"></div>
- 
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
 let registros = JSON.parse(localStorage.getItem('atleta_v2') || '[]');
 let energiaAtual = null;
 let charts = {};
- 
+
 function save() { localStorage.setItem('atleta_v2', JSON.stringify(registros)); }
- 
+
 function formatDate(d) {
   if (!d) return '';
   const [y, m, day] = d.split('-');
@@ -349,16 +356,16 @@ function formatDateShort(d) {
   const [y, m, day] = d.split('-');
   return `${day}/${m}`;
 }
- 
+
 function save() { localStorage.setItem('atleta_v2', JSON.stringify(registros)); }
- 
+
 function toast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 2500);
 }
- 
+
 function nav(id, el) {
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -368,18 +375,18 @@ function nav(id, el) {
   if (id === 'graficos') renderGraficos();
   if (id === 'recordes') renderRecordes();
 }
- 
+
 function pickEnergy(v) {
   energiaAtual = v;
   document.querySelectorAll('.energy-opt').forEach((el, i) => {
     el.classList.toggle('sel', i + 1 <= v);
   });
 }
- 
+
 function salvar() {
   const data = document.getElementById('f-data').value;
   if (!data) { toast('⚠️ Preencha a data'); return; }
- 
+
   const r = {
     data,
     energia: energiaAtual,
@@ -388,24 +395,25 @@ function salvar() {
     flexoes: parseInt(document.getElementById('f-flexoes').value) || null,
     prancha: parseInt(document.getElementById('f-prancha').value) || null,
     embaixadinha: parseInt(document.getElementById('f-embaixadinha').value) || null,
-    passes: parseInt(document.getElementById('f-passes').value) || null,
+    passesDir: parseInt(document.getElementById('f-passes-dir').value) || null,
+    passesEsq: parseInt(document.getElementById('f-passes-esq').value) || null,
     conquista: document.getElementById('f-conquista').value.trim()
   };
- 
+
   const idx = registros.findIndex(x => x.data === data);
   if (idx >= 0) registros[idx] = r; else registros.push(r);
   registros.sort((a,b) => a.data.localeCompare(b.data));
   save();
- 
-  ['f-sprint','f-salto','f-flexoes','f-prancha','f-embaixadinha','f-passes','f-conquista'].forEach(id => document.getElementById(id).value = '');
+
+  ['f-sprint','f-salto','f-flexoes','f-prancha','f-embaixadinha','f-passes-dir','f-passes-esq','f-conquista'].forEach(id => document.getElementById(id).value = '');
   energiaAtual = null;
   document.querySelectorAll('.energy-opt').forEach(e => e.classList.remove('sel'));
   document.getElementById('f-semana').value = registros.length + 1;
- 
+
   toast('✓ Registro salvo!');
   renderAll();
 }
- 
+
 function getLast(key) {
   const v = registros.filter(r => r[key] != null);
   return v.length ? v[v.length-1][key] : null;
@@ -428,7 +436,7 @@ function deltaHtml(key, lower=false) {
   const val = key === 'sprint' ? diff.toFixed(1) : Math.round(diff);
   return `<span class="${good ? 'up' : 'down'}">${sign}${val} vs anterior</span>`;
 }
- 
+
 function renderHome() {
   if (!registros.length) {
     document.getElementById('home-empty').style.display = '';
@@ -437,22 +445,22 @@ function renderHome() {
   }
   document.getElementById('home-empty').style.display = 'none';
   document.getElementById('home-content').style.display = '';
- 
+
   const last = registros[registros.length - 1];
   document.getElementById('last-week-label').textContent = formatDate(last.data);
   document.getElementById('last-energy-display').textContent = last.energia ? 'Energia: ' + last.energia + '/5' : '';
- 
+
   const streak = document.getElementById('streak-pill');
   streak.style.display = 'flex';
   document.getElementById('streak-num').textContent = registros.length;
- 
+
   const metrics = [
     { label: 'Sprint 20m', key: 'sprint', unit: 's', lower: true },
     { label: 'Flexões', key: 'flexoes', unit: 'reps', lower: false },
     { label: 'Prancha', key: 'prancha', unit: 's', lower: false },
     { label: 'Salto', key: 'salto', unit: 'cm', lower: false },
   ];
- 
+
   document.getElementById('home-metrics').innerHTML = metrics.map(m => {
     const val = getLast(m.key);
     return `<div class="metric-tile">
@@ -461,7 +469,7 @@ function renderHome() {
       <div class="metric-tile-delta">${deltaHtml(m.key, m.lower)}</div>
     </div>`;
   }).join('');
- 
+
   const last6 = registros.filter(r => r.energia).slice(-6);
   const maxH = 50;
   document.getElementById('home-energy-chart').innerHTML = last6.map(r => {
@@ -472,7 +480,7 @@ function renderHome() {
       <div class="energy-col-label">${formatDateShort(r.data)}</div>
     </div>`;
   }).join('');
- 
+
   if (last.conquista) {
     document.getElementById('home-conquista-card').style.display = '';
     document.getElementById('home-conquista-text').textContent = '"' + last.conquista + '"';
@@ -480,12 +488,13 @@ function renderHome() {
     document.getElementById('home-conquista-card').style.display = 'none';
   }
 }
- 
+
 function makeChart(id, data, color, lowerBetter=false) {
-  const withData = registros.filter(r => r[id.replace('c-','')] != null);
+  const key = id.replace('c-','');
+  const withData = registros.filter(r => r[key] != null);
   if (!withData.length) return;
   const labels = withData.map(r => formatDateShort(r.data));
-  const vals = withData.map(r => r[id.replace('c-','')]);
+  const vals = withData.map(r => r[key]);
   if (charts[id]) { charts[id].destroy(); delete charts[id]; }
   const ctx = document.getElementById(id);
   if (!ctx) return;
@@ -515,9 +524,9 @@ function makeChart(id, data, color, lowerBetter=false) {
     }
   });
 }
- 
+
 function renderGraficos() {
-  const hasAny = registros.some(r => r.sprint || r.flexoes || r.prancha || r.salto || r.embaixadinha || r.passes);
+  const hasAny = registros.some(r => r.sprint || r.flexoes || r.prancha || r.salto || r.embaixadinha || r.passesDir || r.passesEsq);
   if (!hasAny || registros.length < 2) {
     document.getElementById('graf-empty').style.display = '';
     document.getElementById('graf-content').style.display = 'none';
@@ -531,12 +540,13 @@ function renderGraficos() {
     makeChart('c-prancha', null, '#185FA5');
     makeChart('c-salto', null, '#f5a623');
     makeChart('c-embaixadinha', null, '#8b5cf6');
-    makeChart('c-passes', null, '#0891b2');
+    makeChart('c-passes-dir', null, '#0891b2');
+    makeChart('c-passes-esq', null, '#e05c2b');
   }, 80);
 }
- 
+
 function renderRecordes() {
-  const hasAny = registros.some(r => r.sprint || r.flexoes || r.prancha || r.salto || r.embaixadinha || r.passes);
+  const hasAny = registros.some(r => r.sprint || r.flexoes || r.prancha || r.salto || r.embaixadinha || r.passesDir || r.passesEsq);
   if (!hasAny) {
     document.getElementById('rec-empty').style.display = '';
     document.getElementById('rec-content').style.display = 'none';
@@ -544,16 +554,17 @@ function renderRecordes() {
   }
   document.getElementById('rec-empty').style.display = 'none';
   document.getElementById('rec-content').style.display = '';
- 
+
   const prs = [
     { label: 'Sprint 20m', key: 'sprint', unit: 's', lower: true },
     { label: 'Salto vertical', key: 'salto', unit: 'cm', lower: false },
     { label: 'Flexões', key: 'flexoes', unit: 'reps', lower: false },
     { label: 'Prancha', key: 'prancha', unit: 's', lower: false },
     { label: 'Embaixadinhas', key: 'embaixadinha', unit: 'toques', lower: false },
-    { label: 'Passes no alvo', key: 'passes', unit: '/10', lower: false },
+    { label: 'Passes ângulo direito', key: 'passesDir', unit: '/10', lower: false },
+    { label: 'Passes ângulo esquerdo', key: 'passesEsq', unit: '/10', lower: false },
   ];
- 
+
   document.getElementById('pr-list').innerHTML = prs.map(p => {
     const best = getBest(p.key, p.lower);
     if (best == null) return '';
@@ -562,7 +573,7 @@ function renderRecordes() {
       <div><span class="pr-val">${best}</span> <span class="pr-unit">${p.unit}</span></div>
     </div>`;
   }).filter(Boolean).join('');
- 
+
   const cqs = registros.filter(r => r.conquista);
   if (cqs.length) {
     document.getElementById('conquistas-card').style.display = '';
@@ -576,16 +587,16 @@ function renderRecordes() {
     document.getElementById('conquistas-card').style.display = 'none';
   }
 }
- 
+
 function renderAll() {
   renderHome();
 }
- 
+
 function dismissBanner() {
   document.getElementById('install-banner').style.display = 'none';
   localStorage.setItem('banner_dismissed', '1');
 }
- 
+
 // Init
 if (localStorage.getItem('banner_dismissed')) {
   document.getElementById('install-banner').style.display = 'none';
