@@ -402,8 +402,6 @@ function salvar() {
   ['f-sprint','f-salto','f-flexoes','f-prancha','f-embaixadinha','f-passes-dir','f-passes-esq','f-conquista'].forEach(id => document.getElementById(id).value = '');
   energiaAtual = null;
   document.querySelectorAll('.energy-opt').forEach(e => e.classList.remove('sel'));
-  document.getElementById('f-semana').value = registros.length + 1;
-
   toast('✓ Registro salvo!');
   renderAll();
 }
@@ -484,7 +482,8 @@ function renderHome() {
 }
 
 function makeChart(id, data, color, lowerBetter=false) {
-  const key = id.replace('c-','');
+  const keyMap = { 'c-passes-dir': 'passesDir', 'c-passes-esq': 'passesEsq' };
+  const key = keyMap[id] || id.replace('c-','');
   const withData = registros.filter(r => r[key] != null);
   if (!withData.length) return;
   const labels = withData.map(r => formatDateShort(r.data));
